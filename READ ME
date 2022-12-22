@@ -1,4 +1,8 @@
-An easy way to convert bulky images to greyscale at once
+WHAT IS IT:
+An easy way to convert bulky images to greyscale at once, without any changes in its' name or dimentions.
+The code is created to make training data for my ANN to convert greyscale images to colored images.
+
+HOW TO USE IT:
 import tools.py then call convertAllImagesInFolder(source_dir, dist_dir) function
 make sure that the letter 'r' is written before directories, for example:
 import tools
