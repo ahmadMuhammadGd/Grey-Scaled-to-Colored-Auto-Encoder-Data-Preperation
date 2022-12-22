@@ -1,0 +1,5 @@
+An easy way to convert bulky images to greyscale at once
+import tools.py then call convertAllImagesInFolder(source_dir, dist_dir) function
+make sure that the letter 'r' is written before directories, for example:
+import tools
+tools.convertAllImagesInFolder(r'G:\source pictures', r'G:\greyscaled')
