@@ -32,7 +32,7 @@ def greyscaleConverter(source_dir, dist_dir):
 
 This function collects the paths of all image files (PNG, JPG, JPEG) in a specified directory.
 
-```
+```python
 from os import listdir
 
 def collectImages(source_dir):
@@ -60,7 +60,7 @@ def collectImages(source_dir):
 ### convertAllImagesInFolder
 
 This function uses the `collectImages` function to collect all images in a specified directory and then converts them to greyscale using the `greyscaleConverter` function.
-```
+```python
 def convertAllImagesInFolder(source_dir, dist_dir):
     imageArray = collectImages(source_dir)
     for image in imageArray:
@@ -71,7 +71,7 @@ def convertAllImagesInFolder(source_dir, dist_dir):
 
 To convert all images in a folder, you can use the following code:
 
-```
+```python
 source_dir = 'input_folder'
 dist_dir = 'output_folder'
 convertAllImagesInFolder(source_dir, dist_dir)
