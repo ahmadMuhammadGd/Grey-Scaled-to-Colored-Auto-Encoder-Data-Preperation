@@ -5,7 +5,7 @@ This Python script allows you to convert images from color to greyscale in a spe
 
 ## Usage
 
-### greyscaleConverter
+### `greyscaleConverter`
 
 This function converts a single image to greyscale and saves it to the destination directory.
 
@@ -16,16 +16,19 @@ def greyscaleConverter(source_dir, dist_dir):
     '''
     Parameters
     ----------
-    source_dir : source image path
-    dist_dir : the path to save the converted image
-    converts the source image to greyscale and saves it to the destination path
+    source_dir : str
+        Source image path
+    dist_dir : str
+        The path to save the converted image
+
+    Converts the source image to greyscale and saves it to the destination path.
     '''
     image = Image.open(source_dir)
     grayscale = image.convert('L')
-    grayscale.save(dist_dir + '\\' + source_dir.split('\\')[-1])
+    grayscale.save(f"{dist_dir}/{source_dir.split('/')[-1]}")
 ```
 
-### collectImages
+### `collectImages`
 
 This function collects the paths of all image files (PNG, JPG, JPEG) in a specified directory.
 
@@ -36,24 +39,25 @@ def collectImages(source_dir):
     '''
     Parameters
     ----------
-    source_dir : directory of the desired folder
+    source_dir : str
+        Directory of the desired folder
 
     Returns
     -------
-    imageArray : an array that contains paths to all images in the source_dir.
-
+    imageArray : list
+        An array that contains paths to all images in the source_dir.
     '''
     imageArray = []
     print("FOUND IMAGES:\n")
     for file in listdir(source_dir):
         if (file.endswith('.png') or file.endswith('.jpg') or file.endswith('.jpeg')):
-            imageArray.append(source_dir + '\\' + file)
-            print(source_dir + '\\' + file)
-    print(len(imageArray), "images are found.")
+            imageArray.append(f"{source_dir}/{file}")
+            print(f"{source_dir}/{file}")
+    print(f"{len(imageArray)} images are found.")
     return imageArray
 ```
 
-### convertAllImagesInFolder
+### `convertAllImagesInFolder`
 
 This function uses the `collectImages` function to collect all images in a specified directory and then converts them to greyscale using the `greyscaleConverter` function.
 
@@ -80,10 +84,4 @@ This will convert all the images in the `input_folder` to greyscale and save the
 
 - Python 3.x
 - Pillow (PIL Fork) Library: You can install it using `pip install Pillow`.
-
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
 ```
-
-Please make sure to include information about how to run your code, any dependencies, and a license if applicable. You should also replace `'input_folder'` and `'output_folder'` in the example with the actual paths you intend to use.
