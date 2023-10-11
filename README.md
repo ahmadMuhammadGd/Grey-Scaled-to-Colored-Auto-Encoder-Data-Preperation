@@ -83,3 +83,7 @@ This will convert all the images in the `input_folder` to greyscale and save the
 
 - Python 3.x
 - Pillow (PIL Fork) Library: You can install it using `pip install Pillow`.
+<<<<<<< HEAD:README.md
+=======
+```
+>>>>>>> 43ab5cfa166191dd0368d10985c471b97d42e563:README
