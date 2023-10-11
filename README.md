@@ -1,4 +1,4 @@
-```
+
 # Image Greyscale Converter
 
 This Python script allows you to convert images from color to greyscale in a specified directory. It includes functions for converting individual images and for converting all images in a folder.
@@ -28,7 +28,7 @@ def greyscaleConverter(source_dir, dist_dir):
     grayscale.save(f"{dist_dir}/{source_dir.split('/')[-1]}")
 ```
 
-### `collectImages`
+### collectImages
 
 This function collects the paths of all image files (PNG, JPG, JPEG) in a specified directory.
 
@@ -57,7 +57,7 @@ def collectImages(source_dir):
     return imageArray
 ```
 
-### `convertAllImagesInFolder`
+### convertAllImagesInFolder
 
 This function uses the `collectImages` function to collect all images in a specified directory and then converts them to greyscale using the `greyscaleConverter` function.
 ```
@@ -83,7 +83,3 @@ This will convert all the images in the `input_folder` to greyscale and save the
 
 - Python 3.x
 - Pillow (PIL Fork) Library: You can install it using `pip install Pillow`.
-<<<<<<< HEAD:README.md
-=======
-```
->>>>>>> 43ab5cfa166191dd0368d10985c471b97d42e563:README
