@@ -72,7 +72,7 @@ def convertAllImagesInFolder(source_dir, dist_dir):
 To convert all images in a folder, you can use the following code:
 
 ```python
-source_dir = 'AE_input_colored'
+source_dir = 'AE_output_colored'
 dist_dir = 'AE_input_greyscaled'
 convertAllImagesInFolder(source_dir, dist_dir)
 ```
